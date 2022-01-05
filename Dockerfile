@@ -4,6 +4,9 @@ FROM ros:$ROS_DISTRO-ros-core
 ARG CI=true
 ENV CI=$CI
 
+# Set default shell to be bash
+SHELL ["/bin/bash", "-c"]
+
 # Dependencies for rosbridge
 RUN apt update && apt-get install -y firefox git wget ros-$ROS_DISTRO-rosbridge-server ros-$ROS_DISTRO-tf2-web-republisher ros-$ROS_DISTRO-common-tutorials ros-$ROS_DISTRO-rospy-tutorials ros-$ROS_DISTRO-actionlib-tutorials
 
