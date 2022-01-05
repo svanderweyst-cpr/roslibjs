@@ -28,7 +28,8 @@ echo -e "\e[1m\e[35mGrunt\e[0m"
 which grunt || true
 ls -alF ../node_modules/grunt/bin
 echo -e "\e[1m\e[35mnpm run build\e[0m"
-npm cache clear -g
+npm cache verify -g
+npm cache clear -g --force
 npm run build
 echo -e "\e[1m\e[35mnpm test\e[0m"
 npm test
