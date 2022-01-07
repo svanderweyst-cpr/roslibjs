@@ -24,12 +24,12 @@ echo -e "\e[1m\e[35mrostopic list\e[0m"
 rostopic list
 echo -e "\e[1m\e[35mnpm install\e[0m"
 npm install
-echo -e "\e[1m\e[35mGrunt\e[0m"
-which grunt || true
-ls -alF ../node_modules/grunt/bin
+if [ "$DOCKER" == true ]
+then
+    echo -e "\e[1m\e[35mnpm install -g grunt\e[0m"
+    npm install -g grunt
+fi
 echo -e "\e[1m\e[35mnpm run build\e[0m"
-npm cache verify -g
-npm cache clear -g --force
 npm run build
 echo -e "\e[1m\e[35mnpm test\e[0m"
 npm test

@@ -4,6 +4,8 @@ FROM ros:$ROS_DISTRO-ros-core
 ARG CI=true
 ENV CI=$CI
 
+ENV DOCKER=true
+
 # Set default shell to be bash
 SHELL ["/bin/bash", "-c"]
 
