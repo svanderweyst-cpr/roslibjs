@@ -26,8 +26,8 @@ echo -e "\e[1m\e[35mnpm install\e[0m"
 npm install
 if [ "$DOCKER" == true ]
 then
-    echo -e "\e[1m\e[35mnpm install -g grunt\e[0m"
-    npm install -g grunt
+    echo -e "\e[1m\e[35mnpm install -g grunt-cli\e[0m"
+    npm install -g grunt-cli
 fi
 echo -e "\e[1m\e[35mnpm run build\e[0m"
 npm run build
