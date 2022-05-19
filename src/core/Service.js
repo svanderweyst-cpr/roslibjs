@@ -102,9 +102,9 @@ Service.prototype.unadvertise = function() {
   this.isAdvertised = false;
 };
 
-Service.prototype._serviceResponse = function(rosbridgeRequest) {
+Service.prototype._serviceResponse = async function(rosbridgeRequest) {
   var response = {};
-  var success = this._serviceCallback(rosbridgeRequest.args, response);
+  var success = await this._serviceCallback(rosbridgeRequest.args, response);
 
   var call = {
     op: 'service_response',
